@@ -63,6 +63,46 @@ background-color: yellow;
     row-gap: header;
   
 }
+ 
+
+
+@media (max-width: 768px) {/* ridimensinato per l'ipad */
+
+   .container{
+   display: grid;
+   grid-template-rows: 30vh 25vh 80vh 25vh 30vh;
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas: 
+   "header header"
+   "menu menu "
+   "main main"
+   "widget1 widget2"
+   "footer footer";
+    column-gap: 0px;
+    height: auto;
+}
+}
+
+@media (max-width: 480px) and (max-width:768px) {/* abbiamo ridimensionato il sito per telefono */
+
+   .container{
+   display: grid;
+   grid-template-rows: 30vh 25vh 80vh 25vh 25vh 30vh;
+    grid-template-columns: 100vw;
+    grid-template-areas: 
+   "header"
+   "menu"
+   "main"
+   "widget1"
+   "widget2"
+   "footer";
+    column-gap: 0px;
+    height: auto;
+}
+}
+body{
+    height: auto;
+}
 
 .area-header{
     grid-area: header;
